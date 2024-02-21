@@ -1,6 +1,6 @@
 /* Instruments */
-import { counterSlice } from "./slices";
+import { apiSlice } from "./api/apiSlice";
 
 export const reducer = {
-  counter: counterSlice.reducer,
+  [apiSlice.reducerPath]: apiSlice.reducer,
 };
