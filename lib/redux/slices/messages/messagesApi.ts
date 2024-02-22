@@ -9,7 +9,7 @@ export const messageApi = apiSlice.injectEndpoints({
                     query: (conversationId) => `/messages/?conversationId=${conversationId}&_sort=timestamp&_order=des&_page=1&_limit=${process.env.NEXT_PUBLIC_API_CONVERSATION_LIMIT}`,
                     async onQueryStarted(arg, { dispatch, queryFulfilled}) {
                         const result = await queryFulfilled;
-                        dispatch(setSelectedConversationId(result?.data?.conversationId));
+                        dispatch(setSelectedConversationId(result?.data[0]?.conversationId));
                     },
                 }),
                 sendMessage: builder.mutation({
