@@ -1,8 +1,11 @@
 /* Components */
-import { Counter } from "./components/Counter/Counter";
 
 export default function IndexPage() {
-  return <Counter />;
+  return (
+    <div>
+      hello
+    </div>
+  )
 }
 
 export const metadata = {

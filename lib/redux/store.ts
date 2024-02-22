@@ -1,3 +1,4 @@
+import { rootReducer } from './rootReducer';
 /* Core */
 import {
   configureStore,
@@ -11,13 +12,13 @@ import {
 } from "react-redux";
 
 /* Instruments */
-import { reducer } from "./rootReducer";
 import { middleware } from "./middleware";
+import { apiSlice } from './api/apiSlice';
 
 export const reduxStore = configureStore({
-  reducer,
+  reducer: rootReducer,
   middleware: (getDefaultMiddleware) => {
-    return getDefaultMiddleware().concat(middleware);
+    return getDefaultMiddleware().concat(apiSlice.middleware);
   },
 });
 export const useDispatch = () => useReduxDispatch<ReduxDispatch>();
