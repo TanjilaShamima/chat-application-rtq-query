@@ -1,11 +1,11 @@
 import { apiSlice } from "../../api/apiSlice";
-import { userLoggedIn } from "./authSlice";
+import { UserType, userLoggedIn } from "./authSlice";
 
 console.log("process.env.NEXT_PUBLIC_API_BASE_URL", process.env.NEXT_PUBLIC_API_BASE_URL);
 
 export const apiAuth = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
-    register: builder.mutation({
+    register: builder.mutation<any, UserType>({
       query: (data) => ({
         url: "/register",
         method: "POST",

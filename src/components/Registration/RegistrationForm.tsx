@@ -1,10 +1,11 @@
 "use client";
 import { useRegisterMutation } from "@/lib/redux/slices/auth/authApi";
+import { UserFormType, UserType } from "@/lib/redux/slices/auth/authSlice";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const RegistrationForm = () => {
-  const [userData, setUserData] = useState<any>();
+  const [userData, setUserData] = useState<UserFormType>({} as UserFormType);
   const [register, { data, isLoading, isSuccess, isError, error }] =
     useRegisterMutation();
     const router = useRouter();
@@ -20,7 +21,7 @@ const RegistrationForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     register({
       name: userData?.name,
@@ -108,7 +109,6 @@ const RegistrationForm = () => {
             name="rememberMe"
             type="checkbox"
             className="h-4 w-4 text-violet-600 focus:ring-violet-500 border-gray-300 rounded"
-            value={userData?.rememberMe}
             onChange={() =>
               setUserData((prev) => ({ ...prev, rememberMe: !prev.rememberMe }))
             }
