@@ -1,6 +1,6 @@
 "use client";
 import { useRegisterMutation } from "@/lib/redux/slices/auth/authApi";
-import { UserFormType, UserType } from "@/lib/redux/slices/auth/authSlice";
+import { UserFormType } from "@/src/utils/appCommonTypes";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 

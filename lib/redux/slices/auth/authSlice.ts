@@ -1,21 +1,6 @@
+import { AuthState } from "@/src/utils/appCommonTypes";
 import { createSlice } from "@reduxjs/toolkit";
 
-export type UserType = {
-  id?: number;
-  name: string;
-  email: string;
-  password: string;
-};
-
-export type UserFormType = UserType & {
-    confirmPassword: string;
-    rememberMe: boolean;
-}
-
-export type AuthState = {
-  accessToken: string | undefined;
-  user: UserType | undefined;
-}
 
 const initialState: AuthState = {
   accessToken: undefined,

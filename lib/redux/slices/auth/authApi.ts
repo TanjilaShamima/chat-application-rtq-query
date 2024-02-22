@@ -1,5 +1,6 @@
+import { UserLogInFormType, UserType } from "@/src/utils/appCommonTypes";
 import { apiSlice } from "../../api/apiSlice";
-import { UserType, userLoggedIn } from "./authSlice";
+import {  userLoggedIn } from "./authSlice";
 
 console.log("process.env.NEXT_PUBLIC_API_BASE_URL", process.env.NEXT_PUBLIC_API_BASE_URL);
 
@@ -25,7 +26,7 @@ export const apiAuth = apiSlice.injectEndpoints({
         }
       },
     }),
-    login: builder.mutation({
+    login: builder.mutation<any, UserLogInFormType>({
       query: (data) => ({
         url: "/login",
         method: "POST",
