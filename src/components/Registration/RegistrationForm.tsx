@@ -8,7 +8,7 @@ const RegistrationForm = () => {
   const [userData, setUserData] = useState<UserFormType>({} as UserFormType);
   const [register, { data, isLoading, isSuccess, isError, error }] =
     useRegisterMutation();
-    const router = useRouter();
+  const router = useRouter();
 
   console.log("userData", userData);
 
@@ -31,10 +31,10 @@ const RegistrationForm = () => {
   };
 
   useEffect(() => {
-    if(isSuccess){
-        router.push('/chat');
+    if (isSuccess) {
+      router.push("/chat");
     }
-  }, [data, error, isSuccess])
+  }, [data, error, isSuccess]);
 
   return (
     <form

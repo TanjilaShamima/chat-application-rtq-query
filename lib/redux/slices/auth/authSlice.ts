@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export type UserType = {
-  id: number | undefined;
+  id?: number;
   name: string;
   email: string;
   password: string;
