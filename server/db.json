@@ -25,21 +25,27 @@
       "id": 4
     },
     {
-      "email": "tanjila.cse.diu+6@gmail.com",
+      "email": "tanjila1@gmail.com",
       "password": "$2a$10$mAq2TY1sRpeUneGwv1bi2..C7tXdpdaur9Wjvj/yIb3C2ManePTUm",
       "name": "tanjila",
       "id": 5
+    },
+    {
+      "email": "shamima@gmail.com",
+      "password": "$2a$10$PI0Ru4Nffug4dDhpjwDvjuuWQkFrDXfQB/j/MSsc48R6r6hyxaz6W",
+      "name": "shamima",
+      "id": 6
     }
   ],
   "conversations": [
     {
       "id": 1,
-      "participants": "sumit@learnwithsumit.com-akash@learnwithsumit.com",
+      "participants": "shamima@gmail.com-akash@learnwithsumit.com",
       "users": [
         {
-          "email": "sumit@learnwithsumit.com",
-          "name": "Sumit Saha",
-          "id": 1
+          "email": "shamima@gmail.com",
+          "name": "shamima",
+          "id": 6
         },
         {
           "email": "akash@learnwithsumit.com",
@@ -52,12 +58,12 @@
     },
     {
       "id": 2,
-      "participants": "sumit@learnwithsumit.com-saad@learnwithsumit.com",
+      "participants": "shamima@gmail.com-saad@learnwithsumit.com",
       "users": [
         {
-          "email": "sumit@learnwithsumit.com",
-          "name": "Sumit Saha",
-          "id": 1
+          "email": "shamima@gmail.com",
+          "name": "shamima",
+          "id": 6
         },
         {
           "email": "akash@learnwithsumit.com",
@@ -74,9 +80,9 @@
       "id": 1,
       "conversationId": 1,
       "sender": {
-        "email": "sumit@learnwithsumit.com",
-        "name": "Sumit Saha",
-        "id": 1
+        "email": "shamima@gmail.com",
+        "name": "shamima",
+        "id": 6
       },
       "receiver": {
         "email": "akash@learnwithsumit.com",
