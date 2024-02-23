@@ -9,7 +9,6 @@ import React from "react";
 
 const SingleMessage = () => {
     const params = useParams();
-    console.log("params", params);
   return (
     <div>
       <Navbar />
